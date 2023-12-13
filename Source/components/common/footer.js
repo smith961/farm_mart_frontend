@@ -1,7 +1,8 @@
-// Footer.js
+
 
 import React from 'react';
 import { link } from 'react-router-dom';
+import 
 
 const footer = () => {
     return(
@@ -20,15 +21,24 @@ const footer = () => {
               </li>
             </ul>
           </div>
-            <div className='site-map'>
+
+          <div>
+          
+     
+  
+
+   
+          </div>
+
+          <div className='site-map'>
               <h3>Site Map</h3>
               <ul>
                <li><Link to="/store">Store</Link></li>
                <li><Link to="/aboutus">About Us</Link></li>
-               <li><Link to="/contactus">Contact Us</Link></li>
-              still cant see you on the call and i cant even hear you
-              </ul>
-            </div>
+               <li><Link to="/contactus">Contact Us</Link></li>      
+              </ul>              
+          </div>
+          
 
         </footer>
     )

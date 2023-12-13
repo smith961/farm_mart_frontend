@@ -31,7 +31,9 @@ const taskReducer = (state = initialState, action) => {
                     }
                     : product,
                     ),
-            }
+            };
+        case ADD_QUANTITY:
+            return
     default:
         return state;
     }

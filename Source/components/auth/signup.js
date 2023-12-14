@@ -1,12 +1,14 @@
-
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { signup } from './Actions';
 
 const Signup = ({ signup }) => {
   const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
     username: '',
     email: '',
+    phoneNumber: '',
     password: '',
   });
 
@@ -26,12 +28,24 @@ const Signup = ({ signup }) => {
       <h2>Signup</h2>
       <form onSubmit={handleSubmit}>
         <label>
+          First Name:
+          <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} />
+        </label>
+        <label>
+          Last Name:
+          <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} />
+        </label>
+        <label>
           Username:
           <input type="text" name="username" value={formData.username} onChange={handleChange} />
         </label>
         <label>
           Email:
           <input type="email" name="email" value={formData.email} onChange={handleChange} />
+        </label>
+        <label>
+          Phone Number:
+          <input type="text" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} />
         </label>
         <label>
           Password:
@@ -43,7 +57,7 @@ const Signup = ({ signup }) => {
   );
 };
 
-// Connect the component to Redux
+// Connect component to Redux
 const mapDispatchToProps = (dispatch) => {
   return {
     signup: (userData) => dispatch(signup(userData)),

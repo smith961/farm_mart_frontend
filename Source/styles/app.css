@@ -28,3 +28,66 @@
     margin-bottom: 20px;
   }
 }
+
+
+/* Mobile-friendly styles for home page*/
+.home-container {
+  padding: 10px;
+}
+
+.background-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.home-content {
+  text-align: center;
+  padding: 20px;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.icon-section {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.icon-card {
+  text-align: center;
+}
+
+.shop-category-section,
+.signup-section {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.category-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.category-icon {
+  text-align: center;
+  width: 45%; 
+  margin: 10px 0;
+}
+
+.signup-section img {
+  width: 100%;
+  max-width: 300px; 
+  margin: 20px 0;
+}
+
+
+@media (max-width: 600px) {
+  .category-icon {
+    width: 100%;
+  }
+}

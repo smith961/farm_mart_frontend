@@ -27,3 +27,31 @@ export const EMPTY_CART = id => {
         type: EMPTY_CART,
     };
 };
+
+//signup action 
+
+export const signup = (userData) => {
+    return async (dispatch) => {
+      try {        
+        const response = await fetch('//put the i', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(userData),
+        });
+  
+        if (response.ok) {
+          dispatch({ type: 'SIGNUP_SUCCESS' });
+          console.log('User signed up successfully!');
+        } else {
+          dispatch({ type: 'SIGNUP_FAILURE', error: 'Failed to sign up. Please try again.' });
+          console.error('Failed to sign up:', response.statusText);
+        }
+      } catch (error) {
+        dispatch({ type: 'SIGNUP_FAILURE', error: 'An error occurred. Please try again.' });
+        console.error('Error during signup:', error.message);
+      }
+    };
+  };
+  

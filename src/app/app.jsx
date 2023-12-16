@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
-import Home from '../Pages/Home';
+import Home from '../pages/Home';
 import AboutUs from '../components/common/AboutUs';
 
 const App = () => {

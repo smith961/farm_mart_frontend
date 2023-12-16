@@ -1,11 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit'
-// import todosReducer from '../features/todos/todosSlice'
-// import filtersReducer from '../features/filters/filtersSlice'
+import TaskReducer from '../reducers/TaskReducer'
 
 const store = configureStore({
     reducer: {
-        // todos: todosReducer,
-        // filters: filtersReducer
+        tasks: TaskReducer
     }
 })
 

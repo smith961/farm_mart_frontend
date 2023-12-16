@@ -15,17 +15,18 @@ const EditProduct = () => {
 
     try {
       // request to Flask server to update the product details
-      const response = await fetch(//i need to input api here// , {
-        method: 'POST', 
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(editedProduct),
-      });
+      const response = await fetch(//i need to update api here// ,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(editedProduct),
+        });
 
       if (response.ok) {
         console.log('Product updated successfully!');
-    
+
       } else {
         console.error('Failed to update product:', response.statusText);
       }
@@ -34,7 +35,7 @@ const EditProduct = () => {
     }
   };
 
-   useEffect to fetch existing product details
+  // useEffect to fetch existing product details
   useEffect(() => {
     // I need to input API endpoint to fetch product details here
     const fetchProductDetails = async () => {
@@ -97,7 +98,7 @@ const EditProduct = () => {
             }
           />
         </label>
-                <button type="submit">Save Changes</button>
+        <button type="submit">Save Changes</button>
       </form>
     </div>
   );

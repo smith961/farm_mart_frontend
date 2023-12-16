@@ -4,18 +4,19 @@ import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import Home from '../pages/Home';
 import AboutUs from '../components/common/AboutUs';
+import { Container } from '@mui/material';
 
 const App = () => {
   return (
     <Router>
-      <div className="app-container">
+      <Container>
         <Header />
         <Routes>
           <Route exact path="/" component={Home} />
           <Route path="/about" component={AboutUs} />
         </Routes>
         <Footer />
-      </div>
+      </Container>
     </Router>
   );
 };

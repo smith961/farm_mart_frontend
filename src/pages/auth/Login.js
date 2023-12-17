@@ -53,7 +53,7 @@ const Login = () => {
           margin='dense'
         />
         <Box sx={{ justifyContent: 'right', display: 'flex', marginTop: '1rem' }}>
-          <Link color='primary' to='/register'>Don't have an account? Register</Link>
+          <Link color='primary' to='/signup'>Don't have an account? Register</Link>
         </Box>
         <Box sx={{ justifyContent: 'center', display: 'flex', marginTop: '1rem' }}>
           <Button type='submit' variant='contained'>

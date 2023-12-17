@@ -187,16 +187,16 @@ const Home = () => {
       <br />
 
       <Grid container spacing={3}>
-        <Grid item xs={12} md={3}>
+        <Grid item xs={6} md={3}>
           <img width={'100%'} src='images/chicken.png' alt='Chicken' />
         </Grid>
-        <Grid item xs={12} md={3}>
+        <Grid item xs={6} md={3}>
           <img width={'100%'} src='images/cow.png' alt='Cow' />
         </Grid>
-        <Grid item xs={12} md={3}>
+        <Grid item xs={6} md={3}>
           <img width={'100%'} src='images/pig.png' alt='Pig' />
         </Grid>
-        <Grid item xs={12} md={3}>
+        <Grid item xs={6} md={3}>
           <img width={'100%'} src='images/snail.png' alt='Snail' />
         </Grid>
       </Grid>

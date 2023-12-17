@@ -2,9 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
-// import Home from '../pages/Home';
+import Home from '../pages/Home';
 import AboutUs from '../components/common/AboutUs';
-// import Store from '../pages/Store';
+import Store from '../pages/Store';
 import { Container } from '@mui/material';
 
 const App = () => {
@@ -14,9 +14,9 @@ const App = () => {
         <Header />
         <br />
         <Routes>
-          {/* <Route exact path="/" element={<Home />} /> */}
+          <Route exact path="/" element={<Home />} />
           <Route path="aboutus" element={<AboutUs />} />
-          {/* <Route path="store" element={<Store />} /> */}
+          <Route path="store" element={<Store />} />
         </Routes>
         <br />
         <br />

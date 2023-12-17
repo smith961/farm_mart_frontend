@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button, AvatarImage, Card, CardMedia, Container, Typography, Box, Paper, MobileStepper } from '@mui/material';
+import { Button, AvatarImage, Card, CardMedia, Container, Typography, Box, Paper, Grid, MobileStepper } from '@mui/material';
 import { KeyboardArrowRight, KeyboardArrowLeft } from '@mui/icons-material';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
+import { LocalShipping, SupportAgent, Payment } from '@mui/icons-material';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const images = [
@@ -157,7 +158,48 @@ const Home = () => {
         </Button>
       </Box>
       <br />
+      <Box sx={{ display: 'flex', justifyContent: 'center', pl: '3rem', pr: '3rem' }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }} >
+          <Payment sx={{ fontSize: '5rem' }} />
+          <Typography variant='h6' align='center' gutterBottom>
+            Safe Payment
+          </Typography>
+        </Box>
+        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }} >
+          <LocalShipping sx={{ fontSize: '5rem' }} />
+          <Typography variant='h6' align='center' gutterBottom>
+            Free Delivery
+          </Typography>
+        </Box>
+        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }} >
+          <SupportAgent sx={{ fontSize: '5rem' }} />
+          <Typography variant='h6' align='center' gutterBottom>
+            24/7 Support
+          </Typography>
+        </Box>
+      </Box>
+      <br />
+      <Box sx={{ display: 'flex', justifyContent: 'center' }} >
+        <Typography variant='h4' align='center' gutterBottom>
+          Shop Categories
+        </Typography>
+      </Box>
+      <br />
 
+      <Grid container spacing={3}>
+        <Grid item xs={12} md={3}>
+          <img width={'100%'} src='images/chicken.png' alt='Chicken' />
+        </Grid>
+        <Grid item xs={12} md={3}>
+          <img width={'100%'} src='images/cow.png' alt='Cow' />
+        </Grid>
+        <Grid item xs={12} md={3}>
+          <img width={'100%'} src='images/pig.png' alt='Pig' />
+        </Grid>
+        <Grid item xs={12} md={3}>
+          <img width={'100%'} src='images/snail.png' alt='Snail' />
+        </Grid>
+      </Grid>
 
     </Container >
   );

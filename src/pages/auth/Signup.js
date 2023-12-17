@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
+import { Box, Button, TextField, Typography } from '@mui/material';
+import { Lock } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 import { signup } from '../../actions/actions';
 
 const Signup = ({ signup }) => {
@@ -24,36 +27,72 @@ const Signup = ({ signup }) => {
   };
 
   return (
-    <div>
-      <h2>Signup</h2>
-      <form onSubmit={handleSubmit}>
-        <label>
-          First Name:
-          <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} />
-        </label>
-        <label>
-          Last Name:
-          <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} />
-        </label>
-        <label>
-          Username:
-          <input type="text" name="username" value={formData.username} onChange={handleChange} />
-        </label>
-        <label>
-          Email:
-          <input type="email" name="email" value={formData.email} onChange={handleChange} />
-        </label>
-        <label>
-          Phone Number:
-          <input type="text" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} />
-        </label>
-        <label>
-          Password:
-          <input type="password" name="password" value={formData.password} onChange={handleChange} />
-        </label>
-        <button type="submit">Sign Up</button>
-      </form>
-    </div>
+    <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', pt: '5rem', pb: '5rem' }}>
+      <Box component='form' onSubmit={handleSubmit} sx={{ display: 'flex', flexDirection: 'column', width: '30rem' }}>
+        <Typography variant='h3' align='center' gutterBottom>
+          Sign Up
+        </Typography>
+        <Box sx={{ display: 'flex', justifyContent: 'center', mb: '5rem' }} >
+          <Lock sx={{ fontSize: '5rem' }} />
+        </Box>
+        <TextField
+          fullWidth
+          label='First Name'
+          name='firstName'
+          onChange={handleChange}
+          value={formData.firstName}
+          margin='normal'
+        />
+        <TextField
+          fullWidth
+          label='Last Name'
+          name='lastName'
+          onChange={handleChange}
+          value={formData.lastName}
+          margin='normal'
+        />
+        <TextField
+          fullWidth
+          label='Username'
+          name='username'
+          onChange={handleChange}
+          value={formData.username}
+          margin='normal'
+        />
+        <TextField
+          fullWidth
+          label='Email'
+          name='email'
+          onChange={handleChange}
+          value={formData.email}
+          margin='normal'
+        />
+        <TextField
+          fullWidth
+          label='Phone Number'
+          name='phoneNumber'
+          onChange={handleChange}
+          value={formData.phoneNumber}
+          margin='normal'
+        />
+        <TextField
+          fullWidth
+          label='Password'
+          name='password'
+          onChange={handleChange}
+          value={formData.password}
+          margin='dense'
+        />
+        <Box sx={{ justifyContent: 'right', display: 'flex', marginTop: '1rem' }}>
+          <Link color='primary' to='/login'>Already have an account? Log in</Link>
+        </Box>
+        <Box sx={{ justifyContent: 'center', display: 'flex', marginTop: '1rem' }}>
+          <Button type='submit' variant='contained'>
+            Sign Up
+          </Button>
+        </Box>
+      </Box>
+    </Box>
   );
 };
 

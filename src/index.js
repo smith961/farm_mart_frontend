@@ -1,15 +1,15 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './styles/index.css';
-import App from './app/app.jsx';
-import Store from './app/store.jsx';
+import App from './app/app';
+import Store from './app/store';
 import { Provider } from 'react-redux';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { ThemeProvider, createTheme } from '@mui/material';
-import { themeOptions } from './theme.jsx';
+import { themeOptions } from './theme';
 
 
 let theme = createTheme(themeOptions);

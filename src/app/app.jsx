@@ -4,20 +4,25 @@ import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import Home from '../pages/Home';
 import AboutUs from '../components/common/AboutUs';
-import { Container } from '@mui/material';
+import Store from '../pages/Store';
+import { Container, Toolbar } from '@mui/material';
 
 const App = () => {
   return (
     <Router>
       <Container>
         <Header />
+        <br />
         <Routes>
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={AboutUs} />
+          <Route exact path="/" element={<Home />} />
+          <Route path="aboutus" element={<AboutUs />} />
+          {/* <Route path="store" element={<Store />} /> */}
         </Routes>
+        <br />
+        <br />
         <Footer />
       </Container>
-    </Router>
+    </Router >
   );
 };
 

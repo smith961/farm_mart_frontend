@@ -1,4 +1,5 @@
-import React, { useState } from "react"; 
+import React, { useState } from "react";
+import { Button, TextField } from "@mui/material";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -20,19 +21,41 @@ const ContactForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label>
-        Name:
-        <input type="text" name="name" value={formData.name} onChange={handleChange} />
-      </label>
-      <label>
-        Email:
-        <input type="email" name="email" value={formData.email} onChange={handleChange} />
-      </label>
-      <label>
-        Message:
-        <textarea name="message" value={formData.message} onChange={handleChange} />
-      </label>
-      <button type="submit">Submit</button> 
+      <TextField
+        fullWidth
+        label='Name'
+        name='name'
+        onChange={handleChange}
+        value={formData.name}
+        variant='outlined'
+        color="secondary"
+        margin="normal"
+      />
+      <TextField
+        fullWidth
+        label='Email'
+        name='email'
+        onChange={handleChange}
+        value={formData.email}
+        variant='outlined'
+        color="secondary"
+        margin="normal"
+      />
+      <TextField
+        fullWidth
+        label='Message'
+        multiline
+        name='message'
+        onChange={handleChange}
+        rows={3}
+        value={formData.message}
+        variant='outlined'
+        color="secondary"
+        margin="normal"
+      />
+      <Button color='secondary' type='submit' variant='contained'>
+        Submit
+      </Button>
     </form>
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import './styles/index.css';
 import App from './app/app.jsx';
 import Store from './app/store.jsx';
@@ -14,11 +14,10 @@ import { themeOptions } from './theme.jsx';
 
 let theme = createTheme(themeOptions);
 const root = document.getElementById('root');
-ReactDOM.render(
+createRoot(root).render(
   <Provider store={Store}>
     <ThemeProvider theme={theme}>
       <App />
     </ThemeProvider>
-  </Provider>,
-  root
+  </Provider>
 );

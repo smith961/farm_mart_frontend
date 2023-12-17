@@ -19,7 +19,7 @@ const Footer = () => {
       <Container fixed maxWidth='lg'>
         <Toolbar>
           <Grid container spacing={3}>
-            <Grid item xs={4}>
+            <Grid item xs={12} md={4}>
               <Typography variant='h5'>
                 FarmMart
               </Typography>
@@ -43,7 +43,7 @@ const Footer = () => {
                 </Typography>
               </ContactDetailBox>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={12} md={4}>
               <Typography variant='h5'>
                 Site Map
               </Typography>
@@ -57,7 +57,7 @@ const Footer = () => {
                 <Link to='/contactus' style={{ textDecoration: 'none', color: 'inherit' }}>Contact Us</Link>
               </Typography>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={12} md={4}>
               <Typography variant='h5'>
                 Contact Us
               </Typography>

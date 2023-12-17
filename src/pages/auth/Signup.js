@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { signup } from './Actions';
+import { signup } from '../../actions/actions';
 
 const Signup = ({ signup }) => {
   const [formData, setFormData] = useState({

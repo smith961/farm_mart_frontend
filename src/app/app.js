@@ -6,6 +6,9 @@ import Home from '../pages/Home';
 import AboutUs from '../pages/AboutUs';
 import Store from '../pages/Store';
 import ContactUs from '../pages/ContactUs';
+import Login from '../pages/auth/Login';
+import Signup from '../pages/auth/Signup';
+import UserProfile from '../pages/auth/UserProfile';
 import { Container } from '@mui/material';
 
 const App = () => {
@@ -18,6 +21,9 @@ const App = () => {
           <Route path="aboutus" element={<AboutUs />} />
           <Route path="store" element={<Store />} />
           <Route path="contactus" element={<ContactUs />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Signup />} />
+          {/* <Route path="profile" element={<UserProfile />} /> */}
         </Routes>
       </Container>
       <Footer />

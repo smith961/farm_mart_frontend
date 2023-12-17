@@ -1,6 +1,6 @@
 import { AppBar, Button, Toolbar, Container, Box } from '@mui/material';
 import { Link } from 'react-router-dom';
-import { IconButton, Menu, MenuItem, Typography } from '@mui/material';
+import { IconButton, Menu, MenuItem, Typography, ButtonGroup } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import React from 'react';
 import { useState } from 'react';
@@ -102,9 +102,14 @@ const Header = () => {
 
           {/* Auth and Cart Buttons */}
           <Box sx={{ flexGrow: 0 }}>
-            <Button variant='contained' color='secondary' component={Link} to='/auth'>
-              Login/Register
-            </Button>
+            <ButtonGroup color='secondary' variant="contained">
+              <Button component={Link} to='/login'>
+                Login
+              </Button>
+              <Button component={Link} to='/signup'>
+                Register
+              </Button>
+            </ButtonGroup>
             <Button color='inherit' component={Link} to='/cart'>
               <ShoppingCartOutlinedIcon />
             </Button>

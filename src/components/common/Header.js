@@ -4,34 +4,37 @@ import { Link } from 'react-router-dom';
 import { Avatar, IconButton, Menu, MenuItem, Tooltip, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import React from 'react';
+import { useState } from 'react';
+
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 const Header = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [anchorElNav, setAnchorElNav] = useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
   };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+  const MenuItemLink = ({ to, children }) => (
+    <MenuItem onClick={handleCloseNavMenu} component={Link} to={to}>
+      <Typography textAlign="center">{children}</Typography>
+    </MenuItem>
+  );
 
   return (
     <AppBar position='static'>
       <Container maxWidth='lg'>
         <Toolbar disableGutters>
-          <Button color='inherit' component={Link} to='/' sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} >
+          {/* Logo Button */}
+          <Button component={Link} to='/' sx={{ display: { xs: 'none', md: 'flex' } }}>
             <img src='images/logo.svg' alt='' height={50} />
           </Button>
+
+          {/* Mobile Menu Button */}
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -61,37 +64,44 @@ const Header = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              <MenuItem onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">Store</Typography>
-              </MenuItem>
-              <MenuItem onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">About Us</Typography>
-              </MenuItem>
-              <MenuItem onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">Contact Us</Typography>
-              </MenuItem>
+              {/* Use MenuItemLink for navigation items in the mobile menu */}
+              <MenuItemLink to='/store'>Store</MenuItemLink>
+              <MenuItemLink to='/aboutus'>About Us</MenuItemLink>
+              <MenuItemLink to='/contactus'>Contact Us</MenuItemLink>
             </Menu>
           </Box>
-          <Button color='inherit' component={Link} to='/' sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}>
+          <Button component={Link} to='/' sx={{
+            display: { xs: 'flex', md: 'none' },
+            flexGrow: 1
+          }}>
             <img src='images/logo.svg' alt='' height={50} />
           </Button>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            {/* Use Link for navigation items in the desktop Navbar */}
             <Button
-              onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: 'white', display: 'block' }} to='/store'>
+              sx={{ my: 2, color: 'white', display: 'block' }}
+              component={Link}
+              to='/store'
+            >
               Store
             </Button>
             <Button
-              onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: 'white', display: 'block' }} to='/aboutus'>
+              sx={{ my: 2, color: 'white', display: 'block' }}
+              component={Link}
+              to='/aboutus'
+            >
               About Us
             </Button>
             <Button
-              onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: 'white', display: 'block' }} to='/contactus'>
+              sx={{ my: 2, color: 'white', display: 'block' }}
+              component={Link}
+              to='/contactus'
+            >
               Contact Us
             </Button>
           </Box>
+
+          {/* Auth and Cart Buttons */}
           <Box sx={{ flexGrow: 0 }}>
             <Button variant='contained' color='secondary' component={Link} to='/auth'>
               Login/Register

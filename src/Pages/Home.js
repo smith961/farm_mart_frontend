@@ -1,19 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Button, AvatarImage, Card, CardMedia, Container } from '@mui/material';
 
 const Home = () => {
   return (
-    <div className="home-container">
-      <div className="background-image">
-        {/* background image goes here */}
-        <div className="home-content">
-          <h1>Connecting Farms to Homes</h1>
-          <p>Your Livestock Marketplace</p>
-          <Link to="/store">
-            <button>Shop Now</button>
-          </Link>
-        </div>
-      </div>
+    <Container>
+      <Container sx={{ background: 'images/hero.svg' }} />
+
+      <h1>Connecting Farms to Homes</h1>
+      <p>Your Livestock Marketplace</p>
+      <Link to="/store">
+        <button>Shop Now</button>
+      </Link>
 
       <div className="icon-section">
         <div className="icon-card">
@@ -67,7 +65,7 @@ const Home = () => {
         </Link>
         <p>Your Path to Lucrative Farming</p>
       </div>
-    </div>
+    </Container >
   );
 };
 

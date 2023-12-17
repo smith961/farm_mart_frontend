@@ -7,5 +7,8 @@ export const themeOptions = {
         secondary: {
             main: '#B9FF66',
         },
+        background: {
+            default: '#B9FF66',
+        },
     },
 };

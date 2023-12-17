@@ -11,19 +11,16 @@ import { Container } from '@mui/material';
 const App = () => {
   return (
     <Router>
-      <Container>
-        <Header />
-        <br />
+      <Header />
+      <Container fixed maxWidth='lg'>
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="aboutus" element={<AboutUs />} />
           <Route path="store" element={<Store />} />
           <Route path="contactus" element={<ContactUs />} />
         </Routes>
-        <br />
-        <br />
-        <Footer />
       </Container>
+      <Footer />
     </Router >
   );
 };

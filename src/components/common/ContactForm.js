@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, TextField } from "@mui/material";
+import { Box, Button, TextField } from "@mui/material";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -27,9 +27,9 @@ const ContactForm = () => {
         name='name'
         onChange={handleChange}
         value={formData.name}
-        variant='outlined'
         color="secondary"
-        margin="normal"
+        margin="dense"
+        size="small"
       />
       <TextField
         fullWidth
@@ -37,9 +37,9 @@ const ContactForm = () => {
         name='email'
         onChange={handleChange}
         value={formData.email}
-        variant='outlined'
         color="secondary"
-        margin="normal"
+        margin="dense"
+        size="small"
       />
       <TextField
         fullWidth
@@ -47,15 +47,17 @@ const ContactForm = () => {
         multiline
         name='message'
         onChange={handleChange}
-        rows={3}
+        rows={2}
         value={formData.message}
-        variant='outlined'
         color="secondary"
-        margin="normal"
+        margin="dense"
+        size="small"
       />
-      <Button color='secondary' type='submit' variant='contained'>
-        Submit
-      </Button>
+      <Box sx={{ justifyContent: 'right', display: 'flex', marginTop: '1rem' }} >
+        <Button color='secondary' type='submit' variant='contained'>
+          Submit
+        </Button>
+      </Box>
     </form>
   );
 };

@@ -1,78 +1,77 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ContactForm from './ContactForm';
-import { Typography, List, ListItem, Grid } from '@mui/material';
+import { Typography, Container, Box, Grid, styled } from '@mui/material';
 import PlaceOutlinedIcon from '@mui/icons-material/PlaceOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
 import { AppBar, Toolbar } from '@mui/material';
 
+const ContactDetailBox = styled(Box)({
+  display: 'flex',
+  alignItems: 'center',
+});
+
 const Footer = () => {
   return (
-    <AppBar position='sticky' sx={{ top: 'auto', bottom: 0, margin: 0 }} >
-      <Toolbar>
-        <Grid container spacing={3}>
-          <Grid item xs={4}>
-            <List>
-              <ListItem>
-                <PlaceOutlinedIcon />
-                <Typography variant='h6' sx={{ flexGrow: 1 }}>
+    <AppBar position='static' sx={{ top: 'auto', bottom: 0, margin: 0 }} >
+      <br />
+      <Container fixed maxWidth='lg'>
+        <Toolbar>
+          <Grid container spacing={3}>
+            <Grid item xs={4}>
+              <Typography variant='h5'>
+                FarmMart
+              </Typography>
+              <ContactDetailBox >
+                <PlaceOutlinedIcon sx={{ mr: '4px', mb: '2px' }} />
+                <Typography>
                   Lagos, Nigeria
                 </Typography>
-              </ListItem>
-              <ListItem>
-                <EmailOutlinedIcon />
-                <Typography variant='h6' sx={{ flexGrow: 1 }}>
+              </ContactDetailBox>
+              <ContactDetailBox>
+                <EmailOutlinedIcon sx={{ mr: '4px', mb: '2px' }} />
+                <Typography>
                   <Link to='mailto:farmmart@moringa.com' style={{ textDecoration: 'none', color: 'inherit' }} >
                     farmmart@moringa.com
                   </Link>
                 </Typography>
-              </ListItem>
-              <ListItem>
-                <PhoneOutlinedIcon />
-                <Typography variant='h6' sx={{ flexGrow: 1 }}> 09011111111
+              </ContactDetailBox>
+              <ContactDetailBox>
+                <PhoneOutlinedIcon sx={{ mr: '4px', mb: '2px' }} />
+                <Typography> 09011111111
                 </Typography>
-              </ListItem>
-            </List>
+              </ContactDetailBox>
+            </Grid>
+            <Grid item xs={4}>
+              <Typography variant='h5'>
+                Site Map
+              </Typography>
+              <Typography>
+                <Link to='/store' style={{ textDecoration: 'none', color: 'inherit' }}>Store</Link>
+              </Typography>
+              <Typography>
+                <Link to='/aboutus' style={{ textDecoration: 'none', color: 'inherit' }}>About Us</Link>
+              </Typography>
+              <Typography >
+                <Link to='/contactus' style={{ textDecoration: 'none', color: 'inherit' }}>Contact Us</Link>
+              </Typography>
+            </Grid>
+            <Grid item xs={4}>
+              <Typography variant='h5'>
+                Contact Us
+              </Typography>
+              <ContactForm />
+            </Grid>
           </Grid>
-          <Grid item xs={4}>
-            <List>
-              <ListItem>
-                <Typography variant='h4' sx={{ flexGrow: 1 }}>
-                  Site Map
-                </Typography>
-              </ListItem>
-              <ListItem>
-                <Typography variant='h6' sx={{ flexGrow: 1 }}>
-                  <Link to='/store' style={{ textDecoration: 'none', color: 'inherit' }}>Store</Link>
-                </Typography>
-              </ListItem>
-              <ListItem>
-                <Typography variant='h6' sx={{ flexGrow: 1 }}>
-                  <Link to='/aboutus' style={{ textDecoration: 'none', color: 'inherit' }}>About Us</Link>
-                </Typography>
-              </ListItem>
-              <ListItem>
-                <Typography variant='h6' sx={{ flexGrow: 1 }}>
-                  <Link to='/contactus' style={{ textDecoration: 'none', color: 'inherit' }}>Contact Us</Link>
-                </Typography>
-              </ListItem>
-            </List>
-          </Grid>
-          <Grid item xs={4}>
-            <List>
-              <ListItem>
-                <Typography variant='h4' sx={{ flexGrow: 1 }}>
-                  Contact Us
-                </Typography>
-              </ListItem>
-              <ListItem>
-                <ContactForm />
-              </ListItem>
-            </List>
-          </Grid>
-        </Grid>
-      </Toolbar>
+        </Toolbar>
+        <Box sx={{ justifyContent: 'center', display: 'flex', marginTop: '1rem' }} >
+          <Typography variant='caption' >
+            &copy; 2023 FarmMart. All rights reserved.
+          </Typography>
+        </Box>
+      </Container>
+      <br />
     </AppBar >
   );
 }

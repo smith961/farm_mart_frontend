@@ -30,7 +30,7 @@ const Login = () => {
 
     <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh' }}>
       <Box component='form' onSubmit={handleSubmit} sx={{ display: 'flex', flexDirection: 'column', width: '30rem' }}>
-        <Typography variant='h3' align='center' gutterBottom>
+        <Typography variant='h2' align='center' gutterBottom>
           Login
         </Typography>
         <Box sx={{ display: 'flex', justifyContent: 'center', mb: '5rem' }} >

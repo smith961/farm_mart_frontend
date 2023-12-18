@@ -40,7 +40,7 @@ const Home = () => {
 
   return (
     <Container>
-      <Box sx={{ width: '100%', flexGrow: 1, mt: '2rem' }}>
+      <Box sx={{ width: '100%', flexGrow: 1 }}>
         <AutoPlaySwipeableViews
           axis={'x'}
           index={activeStep}

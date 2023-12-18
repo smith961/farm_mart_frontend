@@ -6,7 +6,7 @@ import { Container, Typography, Box, Button } from "@mui/material";
 const ContactUs = () => {
     return (
         <Container >
-            <Typography variant='h3' align='center' gutterBottom>
+            <Typography variant='h2' align='center' gutterBottom>
                 Contact Us
             </Typography>
 

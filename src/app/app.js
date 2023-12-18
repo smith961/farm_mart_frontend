@@ -8,7 +8,7 @@ import Store from '../pages/Store';
 import ContactUs from '../pages/ContactUs';
 import Login from '../pages/auth/Login';
 import Signup from '../pages/auth/Signup';
-import FarmerDashboard from '../pages/FarmerDashboard';
+import FarmerDashboard from '../components/common/FarmerDashboard';
 import UserProfile from '../pages/auth/UserProfile';
 import { Container } from '@mui/material';
 

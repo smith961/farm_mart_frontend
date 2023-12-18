@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Tabs, Tab, Typography, Box } from '@mui/material';
-import FarmerOverview from '../components/farmer/Overview';
-import FarmerAnimals from '../components/farmer/Animals';
-import FarmerCustomers from '../components/farmer/Customers';
-import FarmerOrders from '../components/farmer/Orders';
+import FarmerOverview from '../farmer/Overview';
+import FarmerAnimals from '../farmer/Animals';
+import FarmerCustomers from '../farmer/Customers';
+import FarmerOrders from '../farmer/Orders';
 
 function CustomTabPanel(props) {
     const { children, value, index, ...other } = props;

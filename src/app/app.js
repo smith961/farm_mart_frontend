@@ -8,6 +8,7 @@ import Store from '../pages/Store';
 import ContactUs from '../pages/ContactUs';
 import Login from '../pages/auth/Login';
 import Signup from '../pages/auth/Signup';
+import FarmerDashboard from '../pages/FarmerDashboard';
 import UserProfile from '../pages/auth/UserProfile';
 import { Container } from '@mui/material';
 
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="contactus" element={<ContactUs />} />
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<Signup />} />
+          <Route path="dashboard" element={<FarmerDashboard />} />
           {/* <Route path="profile" element={<UserProfile />} /> */}
         </Routes>
       </Container>

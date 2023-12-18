@@ -27,7 +27,7 @@ const Signup = ({ signup }) => {
   };
 
   return (
-    <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', pt: '5rem', pb: '5rem' }}>
+    <Box sx={{ display: 'flex', justifyContent: 'center', pb: '5rem' }}>
       <Box component='form' onSubmit={handleSubmit} sx={{ display: 'flex', flexDirection: 'column', width: '30rem' }}>
         <Typography variant='h2' align='center' gutterBottom>
           Sign Up

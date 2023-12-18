@@ -28,7 +28,7 @@ const Login = () => {
 
   return (
 
-    <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh' }}>
+    <Box sx={{ display: 'flex', justifyContent: 'center', height: '80vh' }}>
       <Box component='form' onSubmit={handleSubmit} sx={{ display: 'flex', flexDirection: 'column', width: '30rem' }}>
         <Typography variant='h2' align='center' gutterBottom>
           Login

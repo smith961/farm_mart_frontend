@@ -48,6 +48,9 @@ const FarmerDashboard = () => {
 
     return (
         <Box sx={{ width: '100%' }}>
+            <Typography variant='h2' align='center' gutterBottom>
+                Farmer Dashboard
+            </Typography>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                 <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" centered>
                     <Tab label="Overview" {...a11yProps(0)} />

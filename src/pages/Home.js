@@ -11,17 +11,17 @@ const images = [
   {
     label: 'Image 1',
     imgPath:
-      'images/hero.svg',
+      'images/animal-hero.png',
   },
   {
     label: 'Image 2',
     imgPath:
-      'images/hero.svg',
+      'images/animal-hero.png',
   },
   {
     label: 'Image 3',
     imgPath:
-      'images/hero.svg',
+      'images/animal-hero.png',
   },
 ];
 const Home = () => {
@@ -40,66 +40,7 @@ const Home = () => {
 
   return (
     <Container>
-      {/* <h1>Connecting Farms to Homes</h1>
-      <p>Your Livestock Marketplace</p>
-      <Link to="/store">
-        <button>Shop Now</button>
-      </Link>
-
-      <div className="icon-section">
-        <div className="icon-card"> */}
-      {/* Icon 1 (Safe Payment) */}
-      {/* <i className="fas fa-credit-card"></i>
-          <p>Safe Payment</p>
-        </div>
-        <div className="icon-card"> */}
-      {/* Icon 2 (Free Delivery) */}
-      {/* <i className="fas fa-truck"></i>
-          <p>Free Delivery</p>
-        </div>
-        <div className="icon-card"> */}
-      {/* Icon 3 (24/7 Support) */}
-      {/* <i className="fas fa-headset"></i>
-          <p>24/7 Support</p>
-        </div>
-      </div>
-
-      <div className="shop-category-section">
-        <h2>Shop Categories</h2>
-        <div className="category-icons"> */}
-      {/* Category 1 */}
-      {/* <div className="category-icon">
-            <img src="category1.jpg" alt="Category 1" />
-            <p>Category 1</p>
-          </div> */}
-      {/* Category 2 */}
-      {/* <div className="category-icon">
-            <img src="category2.jpg" alt="Category 2" />
-            <p>Category 2</p>
-          </div> */}
-      {/* Category 3 */}
-      {/* <div className="category-icon">
-            <img src="category3.jpg" alt="Category 3" />
-            <p>Category 3</p>
-          </div> */}
-      {/* Category 4 */}
-      {/* <div className="category-icon">
-            <img src="category4.jpg" alt="Category 4" />
-            <p>Category 4</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="signup-section"> */}
-      {/* Image with button to signup */}
-      {/* <img src="signup-image.jpg" alt="Signup Image" />
-        <Link to="/signup">
-          <button>Register as a Farmer</button>
-        </Link>
-        <p>Your Path to Lucrative Farming</p>
-      </div> */}
-
-      <Box sx={{ width: '100%', flexGrow: 1 }}>
+      <Box sx={{ width: '100%', flexGrow: 1, mt: '2rem' }}>
         <AutoPlaySwipeableViews
           axis={'x'}
           index={activeStep}
@@ -109,16 +50,21 @@ const Home = () => {
           {images.map((step, index) => (
             <div key={step.label}>
               {Math.abs(activeStep - index) <= 2 ? (
-                <Box
-                  component="img"
-                  sx={{
-                    display: 'block',
-                    overflow: 'hidden',
-                    width: '100%',
-                  }}
-                  src={step.imgPath}
-                  alt={step.label}
-                />
+                <Box sx={{ backgroundImage: 'url(images/animal-hero.png)', backgroundSize: 'cover', backgroundPosition: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'end', alignItems: 'end', height: '40vh', padding: '4rem' }}
+                >
+                  <Typography variant='h3' color={'white'} gutterBottom>
+                    Connecting Farms to Homes
+                  </Typography>
+                  <Typography variant='h6' color={'white'} gutterBottom>
+                    Your Livestock Marketplace
+                  </Typography>
+                  <Box sx={{ display: 'flex', justifyContent: 'center' }} >
+                    <Button component={Link} to='/Store' variant='contained'>
+                      Shop Now
+                    </Button>
+                  </Box>
+
+                </Box>
               ) : null}
             </div>
           ))}
@@ -145,18 +91,6 @@ const Home = () => {
           }
         />
       </Box>
-
-      <Typography variant='h4' align='center' gutterBottom>
-        Connecting Farms to Homes
-      </Typography>
-      <Typography variant='h6' align='center' gutterBottom>
-        Your Livestock Marketplace
-      </Typography>
-      <Box sx={{ display: 'flex', justifyContent: 'center' }} >
-        <Button component={Link} to='/Store' variant='contained'>
-          Shop Now
-        </Button>
-      </Box>
       <br />
       <Box sx={{ display: 'flex', justifyContent: 'center', pl: '3rem', pr: '3rem' }}>
         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }} >
@@ -179,14 +113,15 @@ const Home = () => {
         </Box>
       </Box>
       <br />
+      <br />
       <Box sx={{ display: 'flex', justifyContent: 'center' }} >
-        <Typography variant='h4' align='center' gutterBottom>
-          Shop Categories
+        <Typography variant='h3' align='center' gutterBottom>
+          Shop by Category
         </Typography>
       </Box>
       <br />
 
-      <Grid container spacing={3}>
+      <Grid container spacing={3} marginBottom={3}>
         <Grid item xs={6} md={3}>
           <img width={'100%'} src='images/chicken.png' alt='Chicken' />
         </Grid>
@@ -200,7 +135,16 @@ const Home = () => {
           <img width={'100%'} src='images/snail.png' alt='Snail' />
         </Grid>
       </Grid>
-
+      <Box sx={{ backgroundImage: 'url(images/farmer-hero.png)', backgroundSize: 'cover', backgroundPosition: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '40vh' }} >
+        <Box sx={{ display: 'flex', justifyContent: 'center' }} >
+          <Button component={Link} to='/signup' variant='contained'>
+            Register as a Farmer
+          </Button>
+        </Box>
+        <Typography variant='h6' color={'white'} gutterBottom>
+          Your Path to Lucrative Farming
+        </Typography>
+      </Box>
     </Container >
   );
 };

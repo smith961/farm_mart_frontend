@@ -52,10 +52,10 @@ const Home = () => {
               {Math.abs(activeStep - index) <= 2 ? (
                 <Box sx={{ backgroundImage: 'url(images/animal-hero.png)', backgroundSize: 'cover', backgroundPosition: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'end', alignItems: 'end', height: '40vh', padding: '4rem' }}
                 >
-                  <Typography variant='h3' color={'white'} gutterBottom>
+                  <Typography variant='h3' align='right' color={'white'} gutterBottom>
                     Connecting Farms to Homes
                   </Typography>
-                  <Typography variant='h6' color={'white'} gutterBottom>
+                  <Typography variant='h6' align='right' color={'white'} gutterBottom>
                     Your Livestock Marketplace
                   </Typography>
                   <Box sx={{ display: 'flex', justifyContent: 'center' }} >

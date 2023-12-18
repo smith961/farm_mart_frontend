@@ -30,7 +30,7 @@ const Header = () => {
         <Toolbar disableGutters>
           {/* Logo Button */}
           <Button component={Link} to='/' sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <img src='images/logo.svg' alt='' height={50} />
+            <img src='images/logo.png' alt='' height={50} />
           </Button>
 
           {/* Mobile Menu Button */}
@@ -67,14 +67,11 @@ const Header = () => {
               <MenuItemLink to='/store'>Store</MenuItemLink>
               <MenuItemLink to='/aboutus'>About Us</MenuItemLink>
               <MenuItemLink to='/contactus'>Contact Us</MenuItemLink>
+              <MenuItemLink to='/login'>Login</MenuItemLink>
+              <MenuItemLink to='/signup'>Register</MenuItemLink>
+              <MenuItemLink to='/cart'>View Cart</MenuItemLink>
             </Menu>
           </Box>
-          <Button component={Link} to='/' sx={{
-            display: { xs: 'flex', md: 'none' },
-            flexGrow: 1
-          }}>
-            <img src='images/logo.svg' alt='' height={50} />
-          </Button>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {/* Use Link for navigation items in the desktop Navbar */}
             <Button
@@ -101,7 +98,7 @@ const Header = () => {
           </Box>
 
           {/* Auth and Cart Buttons */}
-          <Box sx={{ flexGrow: 0 }}>
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, flexGrow: 0 }}>
             <ButtonGroup color='secondary' variant="contained">
               <Button component={Link} to='/login'>
                 Login
@@ -114,6 +111,13 @@ const Header = () => {
               <ShoppingCartOutlinedIcon />
             </Button>
           </Box>
+
+          <Button component={Link} to='/' sx={{
+            display: { xs: 'flex', md: 'none' },
+            flexGrow: 0
+          }}>
+            <img src='images/logo.png' alt='' height={50} />
+          </Button>
         </Toolbar>
       </Container>
     </AppBar>

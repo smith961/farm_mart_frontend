@@ -15,7 +15,7 @@ const App = () => {
   return (
     <Router>
       <Header />
-      <Container fixed maxWidth='lg'>
+      <Container fixed maxWidth='lg' sx={{ 'minHeight': '70vh' }}>
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="aboutus" element={<AboutUs />} />

@@ -1,15 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Container, Typography, Box, Button } from "@mui/material";
 
 
 const ContactUs = () => {
     return (
-        <div>
-            <h2>Contact Us</h2>
-            <p>
-                <Link to="/">Home</Link>
-            </p>
-        </div>
+        <Container >
+            <Typography variant='h3' align='center' gutterBottom>
+                Contact Us
+            </Typography>
+
+            <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', pt: '5rem', pb: '5rem' }}>
+                <Button variant='contained' component={Link} to='/'>
+                    Home
+                </Button>
+            </Box>
+        </Container>
     );
 }
 

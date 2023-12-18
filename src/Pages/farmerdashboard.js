@@ -54,7 +54,7 @@ const FarmerDashboard = () => {
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                 <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" centered>
                     <Tab label="Overview" {...a11yProps(0)} />
-                    <Tab label="Animals" {...a11yProps(1)} />
+                    <Tab label="Livestock" {...a11yProps(1)} />
                     <Tab label="Customers" {...a11yProps(2)} />
                     <Tab label="Orders" {...a11yProps(3)} />
                 </Tabs>

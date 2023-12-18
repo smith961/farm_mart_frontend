@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { Container, Typography, Box, Button, Grid, Card, CardMedia, CardContent, CardHeader } from "@mui/material";
+import { Container, Typography, Grid, Card, CardMedia, CardContent, CardHeader } from "@mui/material";
 
 
 const Animals = () => {

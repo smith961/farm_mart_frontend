@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button, AvatarImage, Card, CardMedia, Container, Typography, Box, Paper, Grid, MobileStepper } from '@mui/material';
+import { Button, Container, Typography, Box, Grid, MobileStepper } from '@mui/material';
 import { KeyboardArrowRight, KeyboardArrowLeft } from '@mui/icons-material';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
